@@ -1,0 +1,154 @@
+/* Custom CSS untuk melengkapi Bootstrap */
+
+/* General Reset and Font */
+:root {
+    --cb-blue: #007bff; /* Primary Color */
+    --cb-dark-blue: #0056b3;
+    --cb-yellow: #ffc107; /* Warning/Accent Color */
+    --cb-dark: #343a40;
+    --cb-light: #e9ecef;
+}
+
+body {
+    padding-top: 56px; /* Space for fixed navbar */
+    font-family: 'Arial', sans-serif;
+    /* Menghapus background-image yang ada di original CSS agar tampilan lebih clean dengan Bootstrap */
+    background-color: white; 
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: var(--cb-blue); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    margin: 0 8px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--cb-yellow) !important;
+    border-bottom: 3px solid var(--cb-yellow);
+}
+
+/* ScrollSpy Active Link (via script.js for better control) */
+.nav-link.active-scroll {
+    color: var(--cb-yellow) !important;
+    border-bottom: 3px solid var(--cb-yellow);
+}
+
+/* Hero Section */
+.hero {
+    /* Ganti dengan gambar sekolah yang sebenarnya. Contoh: */
+    background: url('img/background.jpg') no-repeat center center/cover;
+    height: 100vh; /* Set hero height to full viewport height */
+    position: relative;
+    color: white;
+}
+
+/* Overlay untuk Hero */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Gelapkan gambar sedikit */
+}
+
+.hero-text {
+    z-index: 10;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+}
+
+.hero p.lead {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Section Styling */
+.section {
+    padding: 6rem 0;
+}
+
+.section h2 {
+    color: var(--cb-blue);
+}
+
+/* Card Jurusan */
+#jurusan .card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#jurusan .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+#jurusan .card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Kontak Section */
+.map-placeholder {
+    height: 300px; /* Reduced height */
+    background-color: #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cb-dark);
+    font-size: 1rem;
+    border: 1px solid #dee2e6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero {
+        height: 60vh;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p.lead {
+        font-size: 1.2rem;
+    }
+}
+
+/* Custom CSS untuk melengkapi Bootstrap */
+
+/* ... (Kode CSS sebelumnya) ... */
+
+/* Tambahan untuk Card Berita */
+.news-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    color: #333; /* Pastikan teks normal tetap gelap */
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.news-card .card-img-top {
+    height: 200px; /* Tinggi gambar yang seragam */
+    object-fit: cover; /* Memastikan gambar terisi penuh tanpa distorsi */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
